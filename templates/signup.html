@@ -1,0 +1,14 @@
+{% extends 'layouts.html' %}
+
+{% content block %}
+    <main class="container signup-section">
+        <div class="section-content">
+            <h2>Create an account</h2>
+            
+            <form method="POST" action="/signup">
+                <input type="text" name=""/>
+                <input type="submit" value="Submit"/>
+            </form>
+        </div>
+    </main>
+{% endblock %}
