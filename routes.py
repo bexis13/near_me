@@ -16,7 +16,7 @@ def index():
 def about():
     return render_template('about.html')
     
-@app.route('/')
+@app.route('/signup')
 def signup():
     form = signupForm()
     return render_template('signup.html', form=form)
