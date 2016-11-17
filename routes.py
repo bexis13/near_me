@@ -48,7 +48,7 @@ def login():
             user = User.query.filter_by(email=email).first()
             if user is not None and user.check_password(password):
                 session['email'] = form.email.data
-                return render_template('home')
+                return redirect(url_for('home'))
             else:
                 return redirect(url_for('login'))
     elif request.method == "GET":
