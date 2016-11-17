@@ -30,9 +30,12 @@ def signup():
             db.session.commit()
             
             session['email'] = newuser.email
-            redirect(url_for('home'))
+            return redirect(url_for('home'))
     elif request.method == "GET":
         return render_template('signup.html', form=form)
+@app.route('/home')
+def home():
+    return render_template('home.html')
     
 #still in development, this is development port and ip for cloud9 workspace   
 if __name__=="__main__":   
